@@ -121,6 +121,8 @@ This provider has the following settings, all are required unless noted:
 * `name` - _Optional_ name of the new VM, if missing the name will be auto
   generated
 * `customization_spec_name` - _Optional_ customization spec for the new VM
+* `customization_timeout` - _Optional_ Maximum number of seconds to wait for 
+  customization
 * `data_store_name` - _Optional_ the datastore where the VM will be located
 * `linked_clone` - _Optional_ link the cloned VM to the parent to share virtual
   disks

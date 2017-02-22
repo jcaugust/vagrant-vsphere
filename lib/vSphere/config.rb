@@ -30,17 +30,20 @@ module VagrantPlugins
       attr_accessor :extra_config
       attr_accessor :real_nic_ip
       attr_accessor :notes
+      attr_accessor :customization_timeout
 
       attr_reader :custom_attributes
 
       def initialize
         @ip_address_timeout = UNSET_VALUE
+        @customization_timeout = UNSET_VALUE
         @custom_attributes = {}
         @extra_config = {}
       end
 
       def finalize!
         @ip_address_timeout = 240 if @ip_address_timeout == UNSET_VALUE
+        @customization_timeout = 900 if @customization_timeout == UNSET_VALUE
       end
 
       def custom_attribute(key, value)
